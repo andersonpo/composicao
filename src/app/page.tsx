@@ -3,6 +3,7 @@
 import { Bike, Camera, Check, X, ArrowRight, CalendarDays, GraduationCap } from "lucide-react"
 import { Notification } from '@/components/Notification'
 import { Button } from "@/components/Button/Button";
+import { Icon } from "@/components/Icon/Icon";
 
 export default function Home() {
   
@@ -67,6 +68,16 @@ export default function Home() {
         <Button success>
           teste icon
         </Button>
+
+        <Button className="text-amber-300 bg-fuchsia-700 font-bold hover:bg-fuchsia-800 hover:text-amber-500">
+          teste custom
+        </Button>
+
+        <Icon icon={Bike} size="bg" />
+        <Icon icon={Bike} />
+        <Icon icon={Bike} size="sm" />
+        <Icon icon={Bike} size="xs" />
+        <Icon icon={Bike} className="w-20 h-20 text-blue-400 bg-violet-800" />
       </div>
   )
 }

@@ -1,12 +1,13 @@
 import { CheckCircle } from "lucide-react";
 import { ComponentProps } from "react";
 import { tv, VariantProps } from "tailwind-variants";
+import { Icon } from "../Icon/Icon";
 
 // usando assim no className também acata a cor conforme atribnuto data, aqui não precisa pois criamos uma variante de sucesso
 //data-[success]:bg-emerald-500
 
 const button = tv({
-    base: "flex items-center justify-center rounded bg-zinc-50 text-sm font-medium my-2 text-zinc-900 hover:bg-zinc-200",
+    base: "flex items-center justify-center rounded bg-blue-200 text-sm font-medium my-2 text-zinc-950 hover:bg-blue-300",
     variants: {
         size: {
             bg: "h-12 px-5",
@@ -35,7 +36,7 @@ export function Button({ success, size, className, ...outrasPropriedadesDoButton
             className={button({ success, size, className })}
             {...outrasPropriedadesDoButton}
             >
-                {success ? <CheckCircle className="h-4 w-4" /> : outrasPropriedadesDoButton.children}
+                {success ? <Icon icon={CheckCircle} className="w-6 h-6" /> : outrasPropriedadesDoButton.children}
             </button>
     )
 }
